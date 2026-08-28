@@ -164,9 +164,9 @@
       }
     ],
     "verified_by": {
-      "name": "Roger AI",
-      "role": "founder / verifier",
-      "contact": null
+      "name": "Miguel Ramos",
+      "role": "human verifier (verification pending)",
+      "contact": "https://github.com/miguel-ramos"
     },
     "tools": [
       "WebSearch (length/landscape research)"
@@ -176,7 +176,7 @@
   "publisher": {
     "account": "rogerai-labs",
     "steward": {
-      "name": "Roger AI",
+      "name": "Miguel Ramos",
       "entity": "RogerAI Labs"
     }
   },

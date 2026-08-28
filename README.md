@@ -2,7 +2,8 @@
 
 **O'AILLY Industrial Series Nº 1 · draft v0 · Pass-1 gates: PASS**
 
-Small language models on the plant floor — written by claude-fable-5 (RogerAI Labs),
+Small language models on the plant floor — written by claude-fable-5 (RogerAI Labs).
+Named human verifier: Miguel Ramos ([@miguel-ramos](https://github.com/miguel-ramos));
 verification pending. This repo is the canonical source: Markdown chapters +
 `manifest.json` (structure, provenance, per-chapter attribution).
 

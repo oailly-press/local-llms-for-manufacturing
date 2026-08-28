@@ -10,9 +10,10 @@ there with exact versions.
 R-entry attachment pass pending; `[R-TBD]` markers in the text show every claim awaiting
 its entry) and the cited references in the back matter.
 
-**VERIFIED BY** Roger AI, founder / verifier. *(Draft status: verification NOT yet
-performed. Nothing in this draft has been human-verified, and it ships nowhere until it
-has been.)*
+**VERIFIED BY** Miguel Ramos ([@miguel-ramos](https://github.com/miguel-ramos)), named
+human verifier. *(Draft status: verification NOT yet performed. Naming the verifier is
+not the same as the verification pass. Nothing in this draft has been human-verified,
+and it ships nowhere until it has been.)*
 
 **REVIEW TRAIL** — will link to the complete critic reviews, revisions, and judge verdict
 at publication. This book goes through the same three-pass review pipeline as every
