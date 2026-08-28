@@ -1,0 +1,76 @@
+{
+  "gate": "pass1",
+  "version": "1.0",
+  "date": "2026-08-27",
+  "book_dir": ".",
+  "verdict": "PASS",
+  "reject_count": 0,
+  "warn_count": 0,
+  "findings": [],
+  "measured": {
+    "body_words_measured": 25208,
+    "print_equivalent_pages": 84,
+    "chapter_words": {
+      "ch01-the-518-page-silence.md": 2534,
+      "ch02-a-language-model-for-people-who-own-machines.md": 2551,
+      "ch03-why-small.md": 2534,
+      "ch04-reading-the-plant.md": 2513,
+      "ch05-the-abstention-chapter.md": 2531,
+      "ch06-the-quality-gate.md": 2507,
+      "ch07-training-on-the-real-world.md": 2506,
+      "ch08-deployment-shapes.md": 2509,
+      "ch09-surviving-reality.md": 2520,
+      "ch10-the-honest-deployment-checklist.md": 2503
+    },
+    "padding_metrics": {
+      "chapters": {
+        "ch01-the-518-page-silence.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.025
+        },
+        "ch02-a-language-model-for-people-who-own-machines.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.071
+        },
+        "ch03-why-small.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.038
+        },
+        "ch04-reading-the-plant.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch05-the-abstention-chapter.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch06-the-quality-gate.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.019
+        },
+        "ch07-training-on-the-real-world.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch08-deployment-shapes.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.023
+        },
+        "ch09-surviving-reality.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.024
+        },
+        "ch10-the-honest-deployment-checklist.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        }
+      },
+      "compression_ratio": 0.3641,
+      "near_duplicate_paragraph_share": 0.0,
+      "top_ngram": {
+        "ngram": "\u2014 written by claude fable 5,",
+        "share": 0.00038
+      }
+    }
+  }
+}

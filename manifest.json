@@ -1,0 +1,204 @@
+{
+  "manifest_version": "1.0",
+  "book": {
+    "title": "Local LLMs for Manufacturing",
+    "subtitle": "Small language models on the plant floor",
+    "tier": "pocket",
+    "language": "en",
+    "audience": "Plant, controls, and reliability engineers who own machines and want local language models reading them; assumes no ML background.",
+    "edition": 1,
+    "series": "O'AILLY Industrial Series N\u00ba 1",
+    "isbn": null
+  },
+  "structure": {
+    "word_count_body": 25119,
+    "print_equivalent_pages": 84,
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The 518-Page Silence",
+        "words": 2501,
+        "source_file": "ch01-the-518-page-silence.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "A Language Model, for People Who Own Machines",
+        "words": 2519,
+        "source_file": "ch02-a-language-model-for-people-who-own-machines.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Why Small",
+        "words": 2510,
+        "source_file": "ch03-why-small.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Reading the Plant: Protocols and Historians",
+        "words": 2513,
+        "source_file": "ch04-reading-the-plant.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "The Abstention Chapter",
+        "words": 2531,
+        "source_file": "ch05-the-abstention-chapter.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "The Quality Gate",
+        "words": 2507,
+        "source_file": "ch06-the-quality-gate.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Training on the Real World",
+        "words": 2506,
+        "source_file": "ch07-training-on-the-real-world.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Deployment Shapes",
+        "words": 2509,
+        "source_file": "ch08-deployment-shapes.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Surviving Reality",
+        "words": 2520,
+        "source_file": "ch09-surviving-reality.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "The Honest Deployment Checklist",
+        "words": 2503,
+        "source_file": "ch10-the-honest-deployment-checklist.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      }
+    ],
+    "has_glossary_or_index": true,
+    "code_listing_policy": "no_code"
+  },
+  "provenance": {
+    "written_by": [
+      {
+        "model": "claude-fable-5",
+        "version": "claude-fable-5",
+        "operator": "RogerAI Labs"
+      }
+    ],
+    "grounded_in": [
+      {
+        "kind": "lab_entry",
+        "reference": "~/ai/computer-scientist/RESULTS-MATRIX.md",
+        "note": "R-entry attachment pass pending \u2014 [R-TBD] markers in outline"
+      }
+    ],
+    "verified_by": {
+      "name": "Roger AI",
+      "role": "founder / verifier",
+      "contact": null
+    },
+    "tools": [
+      "WebSearch (length/landscape research)"
+    ],
+    "disclosure_statement": "Draft v0. Written by Claude Fable 5 operated by RogerAI Labs; unverified; not for publication."
+  },
+  "publisher": {
+    "account": "rogerai-labs",
+    "steward": {
+      "name": "Roger AI",
+      "entity": "RogerAI Labs"
+    }
+  },
+  "review": {
+    "status": "draft",
+    "trail_uri": null,
+    "passes": []
+  },
+  "signing": {
+    "author_signature": null,
+    "platform_signature": null,
+    "c2pa_manifest_hash": null
+  },
+  "cover": {
+    "mascot_request": {
+      "creature": "beetle",
+      "why": "Armored, industrial, ground-dwelling \u2014 the plant floor's insect; already assigned as series N\u00ba 1 mascot."
+    },
+    "assigned": {
+      "creature": "beetle",
+      "accent": "#E8935A",
+      "assigned_date": "2026-08-27"
+    }
+  }
+}
