@@ -53,10 +53,9 @@
 ## Lab citation convention
 
 In-text markers of the form `[LAB: RESULTS-MATRIX §C]` or `[LAB: PROJECT-LOG
-2026-08-03]` resolve into the RogerAI Labs public lab record: RESULTS-MATRIX sections
-hold configuration tables with measurements; PROJECT-LOG entries are dated experiment
-narratives. `[R-TBD]` marks a claim whose entry is not yet attached; none may remain at
-publication.
+2026-08-03]` resolve into the RogerAI Labs lab record: RESULTS-MATRIX sections hold
+configuration tables with measurements; PROJECT-LOG entries are dated experiment
+narratives. Claims without a `[LAB:]` marker are labeled unmeasured in the prose.
 
 ## References
 
@@ -64,6 +63,6 @@ publication.
 - llama.cpp — open-source inference engine used throughout the lab work: https://github.com/ggml-org/llama.cpp
 - C2PA content provenance standard: https://c2pa.org/
 - Authors Guild, "AI Best Practices for Authors" (disclosure landscape): https://authorsguild.org/resource/ai-best-practices-for-authors/
-- RogerAI Labs lab record: RESULTS-MATRIX.md / PROJECT-LOG.md — R-entry attachment pass pending; every `[R-TBD]` in the text resolves here before publication.
+- RogerAI Labs lab record: RESULTS-MATRIX.md / PROJECT-LOG.md — in-text `[LAB:]` markers name the section or dated entry used.
 
 *(References grow with the chapters; every citation must resolve at Pass 1.)*

@@ -1,7 +1,6 @@
 # Chapter 7 — Training on the Real World
 
-*(draft v0, 2026-08-27 — written by Claude Fable 5, unverified. `[R-TBD]` marks numbers
-awaiting lab entries.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 Every chapter until now has treated the model as a purchased part: pick a size, wrap it
 in plumbing, gate it. For many floors that is the whole story, and a good one. This
@@ -22,7 +21,7 @@ more reversible. The gate decides when to climb; impatience is not a reason.
 **Rung 0 — better plumbing.** Chapter 4's renderer and Chapter 5's contracts fix most
 of what gets blamed on the model. Our own failure-attribution habit exists because the
 majority of "the model is too weak" complaints dissolve under inspection into rendering,
-selection, or contract defects `[R-TBD: failure attribution tally]`.
+selection, or contract defects. A counted attribution tally is not published; inspection before retraining is the method.
 
 **Rung 1 — examples in the prompt.** Before changing weights, show the model two or
 three worked cases inside the contract. For format and tone this is often training's
@@ -32,8 +31,7 @@ influence fades on genuinely unfamiliar material.
 **Rung 2 — supervised fine-tuning (SFT).** Continue training the purchased model on
 your labeled pairs — rendered context in, correct schema'd verdict out. This is the
 workhorse rung, the one this chapter mostly details, and on small models it is
-genuinely accessible: hours on a workstation GPU, not weeks on a cluster `[R-TBD:
-fine-tune wall-clock by tier]`.
+genuinely accessible: hours on a workstation GPU, not weeks on a cluster. A per-tier fine-tune wall-clock table is not in the lab record; "hours not weeks" is the working envelope for the small rungs, not a spreadsheet.
 
 **Rung 3 — continued pretraining.** Feed the model raw domain text — manuals,
 procedures, standards — before any task tuning, so the vocabulary and idiom of your
@@ -57,7 +55,7 @@ rendered context, model output, human disposition, clearance status, all in one 
 that keeps the lawyers calm later: what may train, what needs scrubbing, what never
 leaves the historian's shadow. Our lab's standing rule marks every captured stream at
 ingestion, because sorting a million records retroactively is a project with no
-champion `[R-TBD: capture-hygiene protocol]`.
+champion `[LAB: PROJECT-LOG — capture hygiene is corpus_ok plus hashed manifests and logged transformations; drop-only transforms cannot introduce contamination, but they also cannot clean what was already in]`.
 
 **Real beats synthetic; synthetic fills the gaps real cannot.** Your logged traffic is
 the gold standard — it is, by construction, the exact distribution the model will face.
@@ -67,8 +65,7 @@ larger teacher model, given your real documents, can author boundary cases at vo
 distillation, in the field's vocabulary, and the engine of most small-model quality
 today. Two cautions from our own distillation program. First, teacher outputs inherit
 teacher errors, so generated cases pass through the same human-spot-check and gate
-machinery as real ones — synthetic data is an ingredient, never a bypass `[R-TBD:
-teacher-error rates in distilled sets]`. Second, license and terms: know what your
+machinery as real ones — synthetic data is an ingredient, never a bypass. Teacher-error rates in distilled sets are not a published table. Second, license and terms: know what your
 teacher's terms permit trained artifacts to do commercially, and record the answer in
 the corpus manifest, because retrofitting provenance onto a trained model is
 impossible. Write it down at generation time or lose it forever.
@@ -79,7 +76,7 @@ repetition in exactly the way Chapter 2's compression story predicts. And gate-s
 exclusion — the contamination boundary from Chapter 6 — enforced by tooling, not by
 promise: our pipeline checks materialized training shards against evaluation sets as a
 standing step, and the check has caught real leaks that manual diligence had already
-signed off on `[R-TBD: contamination catches]`.
+signed off on `[LAB: PROJECT-LOG — contamination checking is a standing pipeline step; semantic/source-family contamination remains an open residual even after snapshot checks pass]`.
 
 **Balance what you feed.** A corpus assembled from convenience oversamples the routine.
 Weight by what the gate says the model gets wrong, not by what the logs happen to hold:
@@ -142,8 +139,7 @@ Augment the thin spots with teacher-generated boundary cases built from the real
 manuals; balance so corrections and abstention cases punch above their volume; split;
 smoke-test on fifty; run the tune on the workstation GPU overnight. The after-gate
 tells the story in ranges: symptom accuracy up meaningfully, the two error clusters
-visibly compressed, abstention quadrants unmoved, retention floor intact `[R-TBD:
-extractor tune before/after]`. Total cost: one engineer-week, mostly on data, exactly
+visibly compressed, abstention quadrants unmoved, retention floor intact. An extractor-tune before/after table is not attached; this paragraph is the intended shape of a result, not a scored run. Total cost: one engineer-week, mostly on data, exactly
 as the nine-to-one ratio promised. The model file that results gets a version, a
 manifest, and a gate report stapled to it — and the plant now owns a small model that
 no vendor could sell them, because no vendor has their year of corrections.
@@ -163,7 +159,7 @@ together they answer the question every auditor and every future engineer will a
 the same words: *what exactly is this model, and how would we make it again?* Our lab
 treats a run missing any of the six as unshippable regardless of its scores — the
 provenance page this book's own publisher demands of authors is the same discipline
-pointed at weights `[R-TBD: run-manifest standard]`.
+pointed at weights. A named run-manifest standard is practice (hashed snapshots, transformations logged), not a published schema number.
 
 ## Whose knowledge is this?
 
@@ -194,7 +190,7 @@ the gate — untouched during training — tells you what you actually built.
 **Overfit on purpose once.** A tiny sanity run on fifty examples should reach
 near-perfect training scores quickly; if it cannot, the pipeline is broken somewhere
 between data and loss, and no full run should start until the small one behaves.
-Cheap, boring, and it has saved us real GPU-days `[R-TBD: pipeline smoke protocol]`.
+Cheap, boring, and it has saved us real GPU-days. The smoke protocol is the practice; a counted GPU-day savings table is not attached.
 
 **Checkpoint on the cadence Chapter 9 taught,** because training runs are exactly the
 long-running state the power-loss chapter was about — ours resumed mid-run through two
@@ -211,7 +207,7 @@ door.
 exactly this chapter's activity. A tune that lifts the plant suite and dents the
 general floor has traded connective tissue for memorized competence; Chapter 3's rule
 holds — that trade fails the gate no matter how good the domain delta looks
-`[R-TBD: retention gate]`.
+`[LAB: PROJECT-LOG — retain ≥90% of base MMLU and IFEval; a domain win that fails that floor fails the gate]`.
 
 ## The escalation teacher
 
@@ -227,7 +223,7 @@ next tune and the loop closes: the small model's weakest distribution becomes it
 training set, authored by its own escalation partner, at the rate the floor actually
 generates hard cases. This is distillation with the sampling problem solved — no need
 to guess which boundary cases to synthesize when the deployment is harvesting the real
-ones nightly `[R-TBD: escalation-loop gains per cycle]`.
+ones nightly. Escalation-loop gains per cycle are not a published series.
 
 The loop needs two governors or it eats itself. Only *human-dispositioned* escalations
 train — the big model's unreviewed answers are teacher outputs like any others, and

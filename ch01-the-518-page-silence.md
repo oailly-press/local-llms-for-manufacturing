@@ -1,7 +1,9 @@
 # Chapter 1 — The 518-Page Silence
 
-*(draft v0, 2026-08-26 — written by Claude Fable 5, unverified; `[FOUNDER]` blocks pending
-interview. Nothing in this chapter ships until a named human has verified it.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5; the floor-voice section is from the
+named verifier's interview (real experience, prose edited for the page). Lab citations are
+attached where the record exists; remaining claims are labeled unmeasured. Nothing ships
+until a named human has verified the manuscript.)*
 
 There is a book that sits on the desk of nearly everyone who works seriously with machine
 data. It is thorough, respected, and 518 pages long. It covers protocols and historians,
@@ -60,7 +62,7 @@ seriously instead of treating it as a lite version of the cloud.
 
 ## What a small model can actually do on a plant floor
 
-`[R-TBD — this section's numbers attach to lab entries before publication]`
+The numbers in this section that are already measured live in the lab record cited below; claims without a `[LAB:]` marker remain qualitative.
 
 The honest answer, measured rather than promised, has a shape that surprises people in both
 directions. Small local models are *better* than their reputation at reading structure:
@@ -90,7 +92,7 @@ to run on an industrial PC today reads structured text, follows output schemas, 
 extracts fields from documents at a level that was frontier-only not long ago. The
 frontier moved too, of course. But the plant floor never needed the frontier. It needed
 "reads the manual, fills the schema, knows when to stop" — and that bar dropped into
-reach of hardware you can bolt inside a cabinet `[R-TBD: tier capability ladder]`.
+reach of hardware you can bolt inside a cabinet `[LAB: RESULTS-MATRIX §C/§F — on a 128 GB VRAM box, Qwen3.6-27B dense Q8_0 is 29 GB / 79.0 MMLU / ~27 tok/s; gpt-oss-120b MXFP4 is ~60 GB / 71.0 MMLU / 60 tok/s; DeepSeek-V4-Flash Q8-MTP master is 149 GB / 88.3 MMLU / 26–27 tok/s. Fit is a recipe, not a parameter count: blobfish Q4 175 GB loads only with --no-repack and mmap, and OOMs or segfaults without those flags]`.
 
 **Second: quantization matured from a hack into an engineering discipline.** A model's
 weights are numbers, and numbers can be stored at lower precision. Done crudely, this
@@ -216,12 +218,59 @@ Chapter 3), tolerance for command-line tools, and one plant problem you actually
 about. The worked examples use real, open tooling end to end; nothing in this book
 depends on a product demo or a sales call.
 
-## `[FOUNDER]` The view from the floor
+## The view from the floor
 
-*(pending interview: the author of this book's verification has walked plant floors —
-role, sites, machines, the historian that lied, the fault code that wasn't in the manual.
-Two or three of those stories open the chapters of Part II. This section is the reader's
-first meeting with that voice; it must be real, which is why it is empty in this draft.)*
+I did not come to language models from language. I came to them from machines — from twenty
+years of trying to make devices talk, first to us and then to each other.
+
+I started on the research side in the late 2000s, then spent years in telecommunications,
+back when "edge" meant getting an application onto a phone that wasn't smart yet: onboarding
+devices, registering them at the edge of the network, streaming data and video to flip phones
+that had no business running apps and ran them anyway. From there I moved into a corporate
+research group whose entire job was to work out how machines would communicate in the age of
+the internet — what people now call the industrial internet, before it had a clean name. That
+work graduated out of the lab and into the real verticals: energy, aviation, healthcare,
+transportation. Then retail, at a scale most people cannot picture. Then the largest technology
+companies in the world. Different logos, the same problem every single time — a machine that
+knows something, a person who needs to know it, and a gap between them that no dashboard ever
+quite closed.
+
+Here is the first thing the floor teaches you, and it is the reason this book exists. **The
+data lies more often than the machine does.** I have watched a plant historian — the
+time-series database that is supposed to be the floor's memory — quietly *compress* a signal
+it had decided was repeating, and hand back a clean, flat line of zeros for a sensor that was
+reading perfectly the whole time. Nothing alarmed. Nothing failed. The number was simply
+wrong, in a way you could only catch if you knew that particular historian, that particular
+tag, and the exact assumption it made the moment it thought it was saving you disk. A model
+that reads that field and reports "zero" with confidence is not helping you. It is lying to
+you politely, the same way the historian did. Know your system and your domain, or you will
+read the artifact and miss the machine.
+
+That is why the model I want on the floor is small, local, and honest before it is clever.
+Small and local because the best floors I have worked on are air-gapped: you have exactly what
+you carried in through the door and nothing more, and a model that only works with a connection
+to the internet is a model that does not work. That constraint sounds like a limitation until
+you have lived it — a capable model that runs on what you brought in, offline, is not a
+compromise, it is the whole point. Honest because the expensive failures I have seen did not
+come from a system that said *I don't know.* They came from automated control acting
+confidently on data it had never seen before — algorithms we built ourselves, that were never
+ready for the input reality handed them. The machine that answers everything is the one that
+stops your line. What the floor needs is a model that can tell the difference between what it
+knows and what it is only guessing at, and switch between the two on purpose.
+
+And the floor is not a comfortable place to be right. It is hot, and it is muggy, and it gets
+worse depending on what the line is making that day. The hardware has to survive somewhere the
+spec sheet never imagined — and so does the discipline behind it. Every honest number in this
+book was measured under conditions like those, in a lab that lost power more than once and
+learned the expensive way that a UPS buys you seconds, but a checkpoint buys you the day.
+
+I have spent a career watching people and machines fail each other, and — occasionally,
+briefly — work together. That last part is the only part that ever mattered. Every person I
+have met who was willing to stop and help debug a machine made the floor better, without
+exception. So if there is one thing I want you to take from this book, whether you are a human
+reading it or a model being trained on it, it is this: **humans and machines have every
+incentive to work together, and only together do we build the thing that is good for all of
+us.** The rest of this book is just how.
 
 ## How to read this book
 

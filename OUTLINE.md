@@ -7,10 +7,10 @@ local, honest model that reads its protocols, cites its historian, and says "I d
 before it says something wrong.
 
 **Evidence discipline:** every benchmark number in this book must resolve to an R-entry in
-`~/ai/computer-scientist/RESULTS-MATRIX.md` or a named external source. `[R-TBD]` marks a
-claim whose entry must be attached before the chapter is called done. `[FOUNDER]` marks
-material gated on the founder interview (role, sites, machines, historians, war stories) —
-**never invent this**.
+`~/ai/computer-scientist/RESULTS-MATRIX.md` or a named external source. In-text `[LAB:]`
+markers name the section or dated entry. Claims without a lab marker are labeled
+unmeasured in the prose. The floor-voice section in chapter 1 is from the named
+verifier's interview; it is still unverified as a manuscript.
 
 ## Part I — The gap
 
@@ -58,7 +58,8 @@ material gated on the founder interview (role, sites, machines, historians, war 
 
 ## Open dependencies
 
-1. `[FOUNDER]` interview → chapter 1 + war stories throughout.
-2. R-entry attachment pass over every `[R-TBD]`.
-3. Title check: "Local LLMs for Manufacturing" vs handoff's "Local Models for
-   Manufacturing" — founder pick.
+1. Floor-voice interview: drafted into chapter 1 (2026-08-28). Still unverified.
+2. R-entry attachment pass: done for chapter body markers (2026-08-28). Unmeasured
+   claims are labeled in prose rather than given fake numbers.
+3. Title: "Local LLMs for Manufacturing" stands.
+4. Named-human verification pass still required before pipeline entry.

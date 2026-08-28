@@ -1,7 +1,6 @@
 # Chapter 2 — A Language Model, for People Who Own Machines
 
-*(draft v0, 2026-08-27 — written by Claude Fable 5, unverified. `[R-TBD]` marks numbers
-that must resolve to lab entries before publication.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 You have a mental model for every machine on your floor. You know a pump moves fluid by
 spinning an impeller, and that knowledge tells you what a cavitation noise means. You know
@@ -165,7 +164,7 @@ expressible mistakes collapses.
 
 Free text is where language models are weakest; enumerations, schemas, and protocol
 fields are where your domain lives. That asymmetry is a large part of why small local
-models can hold their own on the floor `[R-TBD: enum-decode mechanics]` — Chapter 4 makes
+models can hold their own on the floor `[LAB: RESULTS-MATRIX R.158 — IEB-Signals v1.3 private holdback, n=3,725, deterministic enum decode: channel-level acc 87.61% / AUROC 0.938 / ECE 0.012; scene-level acc 47.89% / AUROC 0.548. Bit-exact across two process launches on 640 rows]` — Chapter 4 makes
 it concrete.
 
 ## What "small" changes, in behavior rather than benchmarks
@@ -211,8 +210,7 @@ reading verbatim text in its window and reorganizing it. The answer cites the ac
 DC bus overvoltage, check decel time and brake resistor. The quality jump between way one
 and way two is larger than the jump between a small model and a frontier model on way
 one. That comparison is the cheapest experiment you can run yourself, and it is the
-single fact that reorganizes how teams use these tools `[R-TBD: grounded-vs-bare
-comparison on industrial Q&A]`.
+single fact that reorganizes how teams use these tools. We have not yet published a head-to-head grounded-versus-bare industrial Q&A table; until that measurement exists, treat the claim as a design rule, not a score.
 
 **Way three: the constrained verdict.** You are not writing an essay; you are deciding a
 dispatch. So you ask for a structured verdict and constrain the output grammar:

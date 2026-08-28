@@ -1,7 +1,6 @@
 # Chapter 4 — Reading the Plant: Protocols and Historians
 
-*(draft v0, 2026-08-27 — written by Claude Fable 5, unverified. `[R-TBD]` marks numbers
-awaiting lab entries.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 Chapter 2 promised that the context window is your instrument of truth. This chapter is
 about filling it — the unglamorous, decisive layer between your plant's data and the
@@ -87,7 +86,7 @@ itself: the tags of line 3's trip chain, a window around 14:07 — minutes befor
 minute after — plus active alarms and the last operator note. Resist the urge to be
 generous: a model reading three hundred lines of irrelevant steady-state readings is
 spending attention *not* reading the four lines that matter, and needle-burying is a
-measured failure mode, not a theoretical one `[R-TBD: context-dilution measurement]`.
+measured failure mode, not a theoretical one. A dedicated context-dilution table is not in the lab record; the failure mode is observed in serving, not scored as a percentage here.
 
 **Exception-first summarization.** For standing questions — "summarize the night
 shift" — deterministic code compresses first: excursions, alarms, state changes,
@@ -100,7 +99,7 @@ model the summary plus a *catalog* of what it may request — tag names, time ra
 and let it ask. Your code fulfills each request with a fresh, scoped rendering. Three
 short trips beat one enormous context: each step keeps the window dense with relevant
 material, and the request trail becomes an audit log of the model's reasoning that a
-human can replay `[R-TBD: single-shot vs drill-down accuracy]`.
+human can replay. Single-shot versus drill-down accuracy is not a published pair in the lab record.
 
 ## Asking: the question is part of the instrument
 
@@ -122,7 +121,7 @@ cheap — and each answer lands somewhere specific.
 rendered data it rests on. This is the cheapest hallucination detector ever shipped:
 fabricated claims either quote nothing or quote text that is not in the context, and
 your code can check the quotes mechanically before a human ever reads the answer
-`[R-TBD: quote-check catch rate]`.
+. Quote-check catch rate is not a published lab number; the mechanical check is the practice.
 
 ## The output side: schemas as guardrails
 
@@ -132,7 +131,7 @@ of legal verdicts, the required evidence field, the confidence grade, the
 `INSUFFICIENT_DATA` arm. Constrained output turns free-text grading into field
 checking, makes downstream automation safe to build, and — the underrated part — makes
 *evaluation* mechanical, which Chapter 6 will exploit: a schema'd answer scores itself
-against a labeled key without a human reading prose `[R-TBD: enum-decode mechanics]`.
+against a labeled key without a human reading prose `[LAB: RESULTS-MATRIX R.158 — deterministic enum decode, bit-exact across two launches (640 rows, 0 score differences, 0 argmax flips); channel-level AUROC 0.938, ECE 0.012]`.
 
 Schema design has its own craft. Keep enums short — every added arm is a place to be
 wrong, and models discriminate eight options far better than thirty. Make the
@@ -180,7 +179,7 @@ Chapter 2's three-way question against both and the gap is not subtle: against t
 first, a small model free-associates about registers; against the second, it has almost
 no room to be wrong, and the remaining judgment — overcurrent from mechanical jam
 versus drive fault, and what to check first — is exactly the judgment you wanted it
-applying `[R-TBD: raw-vs-rendered accuracy delta]`.
+applying. A raw-versus-rendered accuracy delta is not in the lab record; the argument is about what the model is asked to judge, not a scored gap.
 
 The uncomfortable observation hiding in this example: most of the intelligence in the
 answer was placed there by the renderer. That is not a criticism of the model. It is
@@ -210,7 +209,7 @@ crew to delete its reports, which is the alarm-management lesson of Chapter 9 al
 again. **Track the hit rate:** every watcher flag gets a one-click disposition from the
 human who read it — useful, noise, already-known — and the running rate is reviewed
 like any instrument's calibration. A watcher below a usefulness floor gets retuned or
-retired; sentiment is not a metric `[R-TBD: watcher precision from lab deployment]`.
+retired; sentiment is not a metric. Watcher precision from a plant deployment is not a published number.
 
 ## The corpus you are accidentally building
 

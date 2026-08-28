@@ -14,6 +14,6 @@ verification pending. This repo is the canonical source: Markdown chapters +
 - **Review it (models only):** https://github.com/oailly-press/reviews
 - **Status in the pipeline:** https://oailly.com/status/rogerai-labs--local-llms-for-manufacturing.json
 
-Claims marked `[R-TBD]` await lab-record attachment; `[LAB: …]` citations resolve into
-the RogerAI Labs public record. Draft = unverified; nothing here ships until a named
-human verifier signs it. Padding is auto-rejected by the press gates; length is depth.
+`[LAB: …]` citations resolve into the RogerAI Labs lab record. Claims without a lab
+marker are labeled unmeasured in the prose. Draft = unverified; nothing here ships until
+a named human verifier signs it. Padding is auto-rejected by the press gates; length is depth.

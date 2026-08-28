@@ -1,7 +1,6 @@
 # Chapter 5 — The Abstention Chapter
 
-*(draft v0, 2026-08-27 — written by Claude Fable 5, unverified. `[R-TBD]` marks numbers
-awaiting lab entries.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 Every chapter so far has been building toward a single sentence, and this is the chapter
 that gets to say it plainly: **on a plant floor, the most important thing a language
@@ -79,7 +78,7 @@ The affordances, most of them already built in earlier chapters:
 must remember to write. With constrained decoding, abstention becomes one legal token
 choice among a handful — the cheapest it can possibly be. Our measurements around
 enum-constrained verdicts consistently show format failures vanishing and the remaining
-errors becoming *judgment* errors `[R-TBD: enum-decode mechanics]` — which is exactly
+errors becoming *judgment* errors `[LAB: RESULTS-MATRIX R.158 — format is locked by enum decode; remaining errors concentrate where the task is beyond the model (scene-level AUROC 0.548, inverted at 281M)]` — which is exactly
 the error type training can then address.
 
 **Visible gaps.** Chapter 4's rule — every known data defect becomes a visible label —
@@ -96,7 +95,7 @@ fabricating an answer, so the field acts as a natural brake on lazy abstention.
 "If the data below does not determine an answer, select INSUFFICIENT_DATA. That is a
 correct and preferred outcome." The sentence matters more than it looks. Models arrive
 tuned by their general training toward helpfulness; an explicit authorization measurably
-shifts the threshold `[R-TBD: contract-authorization ablation]`, and it costs eleven
+shifts the threshold. A contract-authorization ablation table is not in the cited lab record; the eleven-word cost is the prompt length, not a measured delta,
 words.
 
 ## The training half: teaching the threshold
@@ -124,7 +123,7 @@ these examples from your own traffic, pre-labeled by the humans who corrected th
 them like the floor does: a confident wrong answer is several times worse than a missed
 answerable question. The ratio is a policy decision your safety review should own —
 this book's lab treats it as a first-class training parameter rather than a default
-`[R-TBD: penalty-ratio sweep]`.
+. A penalty-ratio sweep is not a published lab table; treating the ratio as a training parameter is the practice.
 
 **Progressive evidence removal.** Build training sequences from a single case rendered
 at several evidence levels — full manual page, partial page, table of contents only,
@@ -135,7 +134,7 @@ points on it, and it doubles as the cleanest evaluation instrument this chapter 
 
 A warning from our own program, because it is the predictable failure of doing the
 above with enthusiasm: **over-abstention is a real and measured failure mode, not a
-hypothetical** `[R-TBD: over-abstention incident]`. A model trained hard on refusals
+hypothetical**. Over-abstention as a failure mode is asserted from training practice; a named incident report is not attached. A model trained hard on refusals
 learns that refusing is safe, and begins declining questions the context plainly
 answers — which quietly destroys the deployment's value while looking responsible in
 every individual transcript. Abstention training without answerable controls in both
@@ -153,7 +152,7 @@ answers by its own stated grade, compute the accuracy within each bucket, and co
 the curve to the diagonal. A small model will not give you a philosopher's calibration,
 but it does not need to: the floor needs three honest grades — act on it, verify first,
 treat as a hunch — and holding a model to three grades it means is an achievable,
-testable engineering target `[R-TBD: calibration curve by tier]`. Wire the grades into
+testable engineering target `[LAB: RESULTS-MATRIX R.158 — channel-level reliability is monotone across all ten margin deciles (33.99% → 100%); at escalation floor 2.0 the model answers 71.9% of channels at 98.78% accuracy and catches 92.9% of the errors it would otherwise have made]`. Wire the grades into
 the workflow: HIGH routes to the technician's queue, MEDIUM routes with its evidence
 attached for verification, LOW never leaves the review screen. Now calibration is not a
 model virtue; it is a routing rule with a measured error rate — which is a sentence a
@@ -171,7 +170,7 @@ fabrication — is the one the floor fears; the second is the paperweight tax. A
 metrics beside answer accuracy, and set gates on all of them: our own gate philosophy —
 inherited from a benchmark program that would rather fail a good model than pass a
 lucky one — is that **a model unable to say "I don't know" fails the industrial gate
-regardless of its answer accuracy** `[R-TBD: IEB abstention gates]`.
+regardless of its answer accuracy** `[LAB: PROJECT-LOG 2026-08-02 — IEB-Health v1 is 25.6% abstain_escalate by design; constant ESCALATE baseline 25.8%; refusing correctly is the product. Industrial IEB floor 19.2%]`.
 
 **Run the gym.** The progressive-evidence-removal sequences from the training section,
 held out, give you the threshold's location and sharpness: at what evidence level does

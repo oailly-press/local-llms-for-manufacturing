@@ -1,7 +1,6 @@
 # Chapter 8 — Deployment Shapes
 
-*(draft v0, 2026-08-27 — written by Claude Fable 5, unverified. `[R-TBD]` marks numbers
-awaiting lab entries.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 The pipeline exists (Chapter 4), the model is honest (Chapter 5), the gate is armed
 (Chapter 6), maybe the weights are yours (Chapter 7). What remains is the question a
@@ -16,8 +15,7 @@ Chapter 1 previewed the stack; here it is as a deployment bill of materials. **T
 weights file:** one large file, checksummed, versioned like firmware. **The inference
 engine:** open-source serving software that loads the weights and speaks HTTP — the
 open engines are mature, actively maintained, and run everything this book discusses;
-our lab's production has run on one for its entire life `[R-TBD: engine/config
-lineage]`. **The service wrapper:** an init-system unit with restart policy, Chapter
+our lab's production has run on one for its entire life `[LAB: RESULTS-MATRIX §A — engine lineage on the same UD-IQ3_XXS 102 GB model: pre-#25545 ~2 tok/s craters; mainline CUDA ~10.8 bimodal; taco 13.1 bimodal; pr25545 GPU indexer 26.2 stable (24.5–28.5), promoted 07-12]`. **The service wrapper:** an init-system unit with restart policy, Chapter
 9's condition gates, and a log destination. **The gateway:** the small application
 layer that owns Chapter 4's rendering and contracts — the only custom software in the
 building. **The gate rig:** Chapter 6's runner, on the same box or beside it. Nothing
@@ -57,7 +55,7 @@ between a service and an open socket.
 the memory ceiling, where the honest failure is a fast "server busy, retry" rather
 than a hung request. Configure explicit concurrency limits below the measured ceiling,
 and surface queue depth as a metric; the day it trends upward is the day you size the
-next shape `[R-TBD: concurrency ceiling measurements]`.
+next shape `[LAB: RESULTS-MATRIX §B — PAR=4 c=1 26.2 tok/s to c=4 46.1 aggregate; taco PAR=8 c=8 65.7 aggregate; a reproducible c=2/c=3 dip on llama.cpp PAR=4 is logged as unresolved scheduling, not cache churn]`.
 
 **Version discipline.** With many clients, "which model answered this?" must be
 recorded, not remembered. The engine's version string, the weights checksum, the
@@ -123,7 +121,7 @@ Sum it, round up one hardware notch — the marginal cost of headroom at purchas
 is a fraction of the cost of discovering its absence — and staple the worksheet to
 the deployment record. When the numbers came from measurements (the gate's throughput
 probes, the cache ceiling test), say so on the sheet; procurement respects an
-instrumented number and audits remember one `[R-TBD: reference sizing worksheet]`.
+instrumented number and audits remember one `[LAB: RESULTS-MATRIX §F — fit recipes on the 128 GB VRAM box: IQ3_XXS 102 GB loads; blobfish Q4 175 GB needs --no-repack and mmap or it OOMs/segfaults; Q8-MTP 160 GB n-cpu-moe 14; Q3-MTP 143 GB prod n-cpu-moe 11]`.
 
 ## The security posture, stated plainly
 
@@ -188,8 +186,7 @@ with tensor-layout optimizations, producing configurations that run at a fractio
 their potential until one line in the load log explains why (Chapter 9's
 read-the-load-log rule, which was earned on exactly this class of mystery). The
 protocol: after any placement change, read the load log's placement summary in full,
-then re-run the gate's throughput probe before calling it done `[R-TBD: placement
-config matrix]`.
+then re-run the gate's throughput probe before calling it done `[LAB: RESULTS-MATRIX §F failed configs — n-cpu-moe 14 VRAM-OOM, ≥18 without --no-repack segfault, --no-mmap host-OOM >125 GB RAM; placement is a matrix you re-measure, not a flag you copy]`.
 
 **The restart that isn't clean.** A serving process that dies mid-batch can leave the
 GPU in a state where the successor process fails to allocate. The watchdog's restart
@@ -231,8 +228,7 @@ answers, scored against what the humans actually did, is the cheapest large-scal
 evaluation you will ever run: production distribution, production load, zero
 production risk. Shadow mode also burns in the operational layer — the watchdogs,
 the log rotation, the thermal reality — while the stakes are nil. Most deployments
-discover their first three surprises here, which is the point `[R-TBD: shadow-phase
-findings from lab deployment]`.
+discover their first three surprises here, which is the point `[LAB: RESULTS-MATRIX §G — production burn-in on promoted Q3-MTP: 12-min soak 86 requests, 0 errors, 100% mean acceptance, +2 MiB VRAM drift; correctness 3/3, concurrent dual-stream MTP, 28K-token long-context recall]`.
 
 **Advisory next.** Outputs become visible, clearly badged as machine drafts, with
 Chapter 5's confidence grades and disposition buttons live. The crew's corrections

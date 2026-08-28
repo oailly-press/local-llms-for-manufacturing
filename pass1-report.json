@@ -1,24 +1,24 @@
 {
   "gate": "pass1",
   "version": "1.0",
-  "date": "2026-08-27",
-  "book_dir": ".",
+  "date": "2026-08-28",
+  "book_dir": "/home/luis/ai/books-by-ai/books/local-llms-for-manufacturing",
   "verdict": "PASS",
   "reject_count": 0,
   "warn_count": 0,
   "findings": [],
   "measured": {
-    "body_words_measured": 25208,
-    "print_equivalent_pages": 84,
+    "body_words_measured": 27099,
+    "print_equivalent_pages": 90,
     "chapter_words": {
-      "ch01-the-518-page-silence.md": 2534,
-      "ch02-a-language-model-for-people-who-own-machines.md": 2551,
-      "ch03-why-small.md": 2534,
-      "ch04-reading-the-plant.md": 2513,
-      "ch05-the-abstention-chapter.md": 2531,
-      "ch06-the-quality-gate.md": 2507,
-      "ch07-training-on-the-real-world.md": 2506,
-      "ch08-deployment-shapes.md": 2509,
+      "ch01-the-518-page-silence.md": 3295,
+      "ch02-a-language-model-for-people-who-own-machines.md": 2600,
+      "ch03-why-small.md": 2804,
+      "ch04-reading-the-plant.md": 2605,
+      "ch05-the-abstention-chapter.md": 2658,
+      "ch06-the-quality-gate.md": 2815,
+      "ch07-training-on-the-real-world.md": 2645,
+      "ch08-deployment-shapes.md": 2654,
       "ch09-surviving-reality.md": 2520,
       "ch10-the-honest-deployment-checklist.md": 2503
     },
@@ -26,7 +26,7 @@
       "chapters": {
         "ch01-the-518-page-silence.md": {
           "scaffold_share": 0.0,
-          "bullet_share": 0.025
+          "bullet_share": 0.021
         },
         "ch02-a-language-model-for-people-who-own-machines.md": {
           "scaffold_share": 0.0,
@@ -34,7 +34,7 @@
         },
         "ch03-why-small.md": {
           "scaffold_share": 0.0,
-          "bullet_share": 0.038
+          "bullet_share": 0.04
         },
         "ch04-reading-the-plant.md": {
           "scaffold_share": 0.0,
@@ -46,7 +46,7 @@
         },
         "ch06-the-quality-gate.md": {
           "scaffold_share": 0.0,
-          "bullet_share": 0.019
+          "bullet_share": 0.018
         },
         "ch07-training-on-the-real-world.md": {
           "scaffold_share": 0.0,
@@ -65,11 +65,11 @@
           "bullet_share": 0.0
         }
       },
-      "compression_ratio": 0.3641,
+      "compression_ratio": 0.367,
       "near_duplicate_paragraph_share": 0.0,
       "top_ngram": {
         "ngram": "\u2014 written by claude fable 5,",
-        "share": 0.00038
+        "share": 0.00032
       }
     }
   }

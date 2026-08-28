@@ -11,13 +11,13 @@
     "isbn": null
   },
   "structure": {
-    "word_count_body": 25119,
-    "print_equivalent_pages": 84,
+    "word_count_body": 27099,
+    "print_equivalent_pages": 90,
     "chapters": [
       {
         "number": 1,
         "title": "The 518-Page Silence",
-        "words": 2501,
+        "words": 3295,
         "source_file": "ch01-the-518-page-silence.md",
         "written_by": [
           {
@@ -30,7 +30,7 @@
       {
         "number": 2,
         "title": "A Language Model, for People Who Own Machines",
-        "words": 2519,
+        "words": 2600,
         "source_file": "ch02-a-language-model-for-people-who-own-machines.md",
         "written_by": [
           {
@@ -43,7 +43,7 @@
       {
         "number": 3,
         "title": "Why Small",
-        "words": 2510,
+        "words": 2804,
         "source_file": "ch03-why-small.md",
         "written_by": [
           {
@@ -56,7 +56,7 @@
       {
         "number": 4,
         "title": "Reading the Plant: Protocols and Historians",
-        "words": 2513,
+        "words": 2605,
         "source_file": "ch04-reading-the-plant.md",
         "written_by": [
           {
@@ -69,7 +69,7 @@
       {
         "number": 5,
         "title": "The Abstention Chapter",
-        "words": 2531,
+        "words": 2658,
         "source_file": "ch05-the-abstention-chapter.md",
         "written_by": [
           {
@@ -82,7 +82,7 @@
       {
         "number": 6,
         "title": "The Quality Gate",
-        "words": 2507,
+        "words": 2815,
         "source_file": "ch06-the-quality-gate.md",
         "written_by": [
           {
@@ -95,7 +95,7 @@
       {
         "number": 7,
         "title": "Training on the Real World",
-        "words": 2506,
+        "words": 2645,
         "source_file": "ch07-training-on-the-real-world.md",
         "written_by": [
           {
@@ -108,7 +108,7 @@
       {
         "number": 8,
         "title": "Deployment Shapes",
-        "words": 2509,
+        "words": 2654,
         "source_file": "ch08-deployment-shapes.md",
         "written_by": [
           {
@@ -160,7 +160,7 @@
       {
         "kind": "lab_entry",
         "reference": "~/ai/computer-scientist/RESULTS-MATRIX.md",
-        "note": "R-entry attachment pass pending \u2014 [R-TBD] markers in outline"
+        "note": "In-text [LAB:] markers name RESULTS-MATRIX sections and PROJECT-LOG dates; unmeasured claims are labeled in prose."
       }
     ],
     "verified_by": {

@@ -6,9 +6,9 @@ This page is the book's byline, stated the way a byline should be.
 attribution in `manifest.json`; if additional models contribute chapters, each is named
 there with exact versions.
 
-**GROUNDED IN** the RogerAI Labs lab record (`RESULTS-MATRIX.md` / `PROJECT-LOG.md` —
-R-entry attachment pass pending; `[R-TBD]` markers in the text show every claim awaiting
-its entry) and the cited references in the back matter.
+**GROUNDED IN** the RogerAI Labs lab record (`RESULTS-MATRIX.md` / `PROJECT-LOG.md`)
+where a `[LAB: …]` marker names the section or dated entry, and the cited references in
+the back matter. Claims without a lab marker are labeled unmeasured in the prose.
 
 **VERIFIED BY** Miguel Ramos ([@miguel-ramos](https://github.com/miguel-ramos)), named
 human verifier. *(Draft status: verification NOT yet performed. Naming the verifier is
