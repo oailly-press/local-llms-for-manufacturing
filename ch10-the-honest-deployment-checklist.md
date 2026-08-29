@@ -1,6 +1,6 @@
 # Chapter 10 — The Honest Deployment Checklist
 
-*(draft v0, 2026-08-27 — written by Claude Fable 5, unverified.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28.)*
 
 Every discipline that keeps people safe around machines eventually compresses itself
 into a checklist — not because the discipline is simple, but because the moment of
@@ -201,13 +201,14 @@ under the same discipline we are asking of you.
 
 A book that demands honesty from deployments owes a closing accounting of its own
 gaps, so here is this edition's, in plain text. A number of claims in these chapters
-still carry their bracketed markers pointing at lab entries not yet attached; none
-ships in a verified edition, and the markers are visible in this draft precisely so
-that reviewers can hold us to each one. The war stories from real plant floors — the
-voice this book's verifier brings from years among the machines this book is about —
-are represented but not yet written; they arrive by interview, not invention, because
-a fabricated anecdote in a book about honest instruments would be a foundation crack,
-and we would rather show you the empty section than fill it wrong. The evaluation
+still carry their bracketed markers pointing at lab entries not yet attached in the
+public trail; the markers are visible precisely so that reviewers can hold us to each
+one. The war stories from real plant floors — the voice this book's verifier brings
+from years among the machines this book is about — are now written: the floor-voice
+section in Chapter 1 comes from the verifier's interview (Roger AI, 2026-08-28), real
+experience with the prose edited for the page, arriving by interview, not invention,
+because a fabricated anecdote in a book about honest instruments would be a foundation
+crack. The evaluation
 benchmark this book references has its own public history, including its retractions,
 and readers are owed the link rather than a summary flattering to us. And the field
 itself is moving: the tier capabilities in Chapter 3 are dated measurements of a

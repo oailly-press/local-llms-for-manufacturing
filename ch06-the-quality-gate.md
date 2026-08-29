@@ -1,6 +1,6 @@
 # Chapter 6 — The Quality Gate
 
-*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 Every chapter so far has ended by deferring to this one. Chapter 3's sizing rule said
 "climb only on measured failure." Chapter 5's abstention metrics needed somewhere to
@@ -108,6 +108,16 @@ your task suites, a small general-capability suite with a hard minimum. A tuned 
 that aces the plant work and collapses on general instruction-following has been
 damaged in ways your task suite cannot see yet; the general floor catches the
 amputation early `[LAB: PROJECT-LOG — retention gates: retain ≥90% of base MMLU and IFEval; 0% general replay produced the cliff between 0% and 1%]`.
+
+One honesty note the rest of this chapter demands of this very rule: a 10% retention drop
+is close to the ±10-point noise floor established above, so on a small general suite the
+"≥90%" line cannot be read off a single pair of runs without risking a false pass or a
+false fail. Apply it the way rule 3 requires of every threshold — as a mean over repeats
+with its spread attached, on a general suite large enough that 10% of the base sits
+outside the measured noise, or the retention gate is measuring the dice, not the damage.
+The number the lab enforces is a working floor, not a precision instrument; the cliff it
+was calibrated against (0% vs 1% general replay) is a collapse, not a marginal delta,
+which is why it survives the noise the marginal case would not.
 
 ## The gate that was too strict, and why we kept the story
 

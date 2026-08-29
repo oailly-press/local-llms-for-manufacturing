@@ -1,9 +1,9 @@
 # Chapter 1 — The 518-Page Silence
 
-*(draft v1, 2026-08-28 — written by Claude Fable 5; the floor-voice section is from the
-named verifier's interview (real experience, prose edited for the page). Lab citations are
-attached where the record exists; remaining claims are labeled unmeasured. Nothing ships
-until a named human has verified the manuscript.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28; the
+floor-voice section is from the verifier's interview (real experience, prose edited for
+the page). Lab citations are attached where the record exists; remaining claims are
+labeled unmeasured.)*
 
 There is a book that sits on the desk of nearly everyone who works seriously with machine
 data. It is thorough, respected, and 518 pages long. It covers protocols and historians,
@@ -56,9 +56,14 @@ floor disagrees, for reasons that predate AI entirely:
   change it, and never otherwise.
 
 So this book commits to a constraint the field's marketing avoids: **the model runs on
-hardware you own, inside your walls, on your data.** Everything that follows — which model
-sizes, which capabilities, which failure modes — flows from taking that constraint
-seriously instead of treating it as a lite version of the cloud.
+hardware you own, inside your walls, on your data.** That is the default and the design
+center, not an absolute vow: Chapter 8 describes the hybrid shape some plants adopt, where
+a local model handles the standing work and an external frontier model is called for the
+rare case that earns it — but only across an explicit, logged boundary the plant controls,
+never silently. The point is ownership of the decision, not purity for its own sake.
+Everything that follows — which model sizes, which capabilities, which failure modes —
+flows from taking the local-first constraint seriously instead of treating it as a lite
+version of the cloud.
 
 ## What a small model can actually do on a plant floor
 

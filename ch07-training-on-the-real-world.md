@@ -1,6 +1,6 @@
 # Chapter 7 — Training on the Real World
 
-*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 Every chapter until now has treated the model as a purchased part: pick a size, wrap it
 in plumbing, gate it. For many floors that is the whole story, and a good one. This

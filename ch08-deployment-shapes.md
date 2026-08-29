@@ -1,6 +1,6 @@
 # Chapter 8 — Deployment Shapes
 
-*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 The pipeline exists (Chapter 4), the model is honest (Chapter 5), the gate is armed
 (Chapter 6), maybe the weights are yours (Chapter 7). What remains is the question a
@@ -121,7 +121,12 @@ Sum it, round up one hardware notch — the marginal cost of headroom at purchas
 is a fraction of the cost of discovering its absence — and staple the worksheet to
 the deployment record. When the numbers came from measurements (the gate's throughput
 probes, the cache ceiling test), say so on the sheet; procurement respects an
-instrumented number and audits remember one `[LAB: RESULTS-MATRIX §F — fit recipes on the 128 GB VRAM box: IQ3_XXS 102 GB loads; blobfish Q4 175 GB needs --no-repack and mmap or it OOMs/segfaults; Q8-MTP 160 GB n-cpu-moe 14; Q3-MTP 143 GB prod n-cpu-moe 11]`.
+instrumented number and audits remember one `[LAB: RESULTS-MATRIX §F — fit recipes on the 128 GB VRAM box: IQ3_XXS 102 GB loads; blobfish Q4 175 GB needs --no-repack and mmap or it OOMs/segfaults; Q8-MTP 160 GB n-cpu-moe 14; Q3-MTP 143 GB prod n-cpu-moe 11]`. Note the honest asymmetry Chapter 3 flagged: these fit-recipe
+numbers are drawn from the 100–175 GB configurations the lab benches most, larger than
+the pocket and line-side classes much of this book's thesis leans on. The arithmetic in
+step 1 scales down cleanly, but the *measured* spine of the sizing evidence is the bigger
+tier; size your small-model box from Chapter 3's arithmetic and your own gate probes, not
+by scaling these specific footprints.
 
 ## The security posture, stated plainly
 

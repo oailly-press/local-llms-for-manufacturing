@@ -1,6 +1,6 @@
 # Chapter 5 — The Abstention Chapter
 
-*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 Every chapter so far has been building toward a single sentence, and this is the chapter
 that gets to say it plainly: **on a plant floor, the most important thing a language
@@ -77,9 +77,11 @@ The affordances, most of them already built in earlier chapters:
 **A first-class arm.** `INSUFFICIENT_DATA` as a schema value, not a phrase the model
 must remember to write. With constrained decoding, abstention becomes one legal token
 choice among a handful — the cheapest it can possibly be. Our measurements around
-enum-constrained verdicts consistently show format failures vanishing and the remaining
-errors becoming *judgment* errors `[LAB: RESULTS-MATRIX R.158 — format is locked by enum decode; remaining errors concentrate where the task is beyond the model (scene-level AUROC 0.548, inverted at 281M)]` — which is exactly
-the error type training can then address.
+enum-constrained verdicts consistently show format errors dropping to zero on the tested
+enum sets and the remaining errors becoming *judgment* errors `[LAB: RESULTS-MATRIX R.158 — format is locked by deterministic enum decode; remaining errors concentrate where the task is beyond the model (scene-level AUROC 0.548; worse — 0.306, significantly inverted — at the 281M tier)]` — which is exactly
+the error type training can then address. The zeroing is of *format* failures specifically,
+on enumerations resolved by constrained decoding; it is not a claim that a model cannot
+be wrong.
 
 **Visible gaps.** Chapter 4's rule — every known data defect becomes a visible label —
 is abstention's raw material. A model can only say "no data for the window in question"

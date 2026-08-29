@@ -1,7 +1,7 @@
 # Chapter 9 — Surviving Reality
 
-*(draft v0, 2026-08-27 — written by Claude Fable 5, unverified. This chapter's evidence
-is unusually direct: our own lab's failure log, cited by date.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28. This
+chapter's evidence is unusually direct: our own lab's failure log, cited by date.)*
 
 Every chapter before this one assumed the computer stays on. This one is about the week
 that assumption failed twice.
@@ -168,6 +168,17 @@ Log the boring successes, too. When the health probe passes, a timestamped line 
 in the artifact trail — which means the *absence* of that line is itself detectable by
 the next layer up. Silence, as our monitoring rules put it, must never be mistakable
 for health.
+
+One boundary keeps that logging from quietly corrupting two other systems. Probe traffic
+is synthetic — a fixed request the box sends itself — so it must carry the
+stay-out-entirely clearance flag from Chapter 4 and land in the operational log, never in
+the corpus stream Chapter 7 trains on: a fine-tune that learns the plant's real question
+distribution must not be diluted by a heartbeat repeated every few seconds, and eval sets
+drawn from the corpus must never inherit a synthetic probe. The same flag keeps probes out
+of the request-log line item in Chapter 8's disk sizing; heartbeat lines belong to
+monitoring retention (short, rotated hard), not to the training-corpus budget that
+otherwise dominates the disk within a year. Mark it at write time and both problems never
+start.
 
 ## Heat: the failure that arrives on schedule
 

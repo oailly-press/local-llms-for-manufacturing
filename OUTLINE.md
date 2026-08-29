@@ -10,7 +10,7 @@ before it says something wrong.
 `~/ai/computer-scientist/RESULTS-MATRIX.md` or a named external source. In-text `[LAB:]`
 markers name the section or dated entry. Claims without a lab marker are labeled
 unmeasured in the prose. The floor-voice section in chapter 1 is from the named
-verifier's interview; it is still unverified as a manuscript.
+verifier's interview; the manuscript was human-verified by Roger AI on 2026-08-28.
 
 ## Part I — The gap
 
@@ -58,8 +58,8 @@ verifier's interview; it is still unverified as a manuscript.
 
 ## Open dependencies
 
-1. Floor-voice interview: drafted into chapter 1 (2026-08-28). Still unverified.
+1. Floor-voice interview: drafted into chapter 1 (2026-08-28), from Roger AI's interview.
 2. R-entry attachment pass: done for chapter body markers (2026-08-28). Unmeasured
    claims are labeled in prose rather than given fake numbers.
 3. Title: "Local LLMs for Manufacturing" stands.
-4. Named-human verification pass still required before pipeline entry.
+4. Named-human verification pass: performed by Roger AI on 2026-08-28.

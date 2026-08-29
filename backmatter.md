@@ -55,7 +55,10 @@
 In-text markers of the form `[LAB: RESULTS-MATRIX §C]` or `[LAB: PROJECT-LOG
 2026-08-03]` resolve into the RogerAI Labs lab record: RESULTS-MATRIX sections hold
 configuration tables with measurements; PROJECT-LOG entries are dated experiment
-narratives. Claims without a `[LAB:]` marker are labeled unmeasured in the prose.
+narratives. A third form, `[LAB: CLAUDE.md …]`, resolves into the lab's standing
+charter — the operating-principles and "watch the traps" notes that record serving and
+hardware lessons as durable rules rather than dated one-off runs. Claims without a
+`[LAB:]` marker are labeled unmeasured in the prose.
 
 ## References
 

@@ -1,6 +1,6 @@
 # Chapter 4 — Reading the Plant: Protocols and Historians
 
-*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 Chapter 2 promised that the context window is your instrument of truth. This chapter is
 about filling it — the unglamorous, decisive layer between your plant's data and the

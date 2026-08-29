@@ -1,6 +1,6 @@
 # Chapter 2 — A Language Model, for People Who Own Machines
 
-*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 You have a mental model for every machine on your floor. You know a pump moves fluid by
 spinning an impeller, and that knowledge tells you what a cavitation noise means. You know
@@ -158,9 +158,15 @@ Because generation is a per-token choice among alternatives, you can lawfully fo
 alternatives. If the answer must be one of `{RUNNING, IDLE, FAULTED, ESTOP}`, the
 inference engine can zero out every token that could not begin a legal answer and choose
 only among the legal ones. This is grammar-constrained decoding, and on structured
-industrial questions it converts "mostly formats correctly" into "cannot format
-incorrectly." The model's judgment still picks *which* legal answer — but the space of
-expressible mistakes collapses.
+industrial questions — enumerations and fixed schemas, where the whole legal space is
+small — it converts "mostly formats correctly" into "cannot emit a token outside the
+grammar." Two caveats keep that honest. It is a property of the *engine* enforcing the
+grammar: constrained decoding is itself a gated flag (Chapter 8), and an engine that
+falls back to free sampling formats incorrectly again, so grammar support belongs in the
+gate's checklist. And it constrains *shape*, not *truth* — where a schema carries a
+free-text field, the grammar guarantees the field is present, not that its contents are
+right. Inside those limits, the model's judgment still picks *which* legal answer, but the
+space of expressible format mistakes collapses.
 
 Free text is where language models are weakest; enumerations, schemas, and protocol
 fields are where your domain lives. That asymmetry is a large part of why small local

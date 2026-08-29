@@ -2,39 +2,39 @@
   "gate": "pass1",
   "version": "1.0",
   "date": "2026-08-28",
-  "book_dir": "/home/luis/ai/books-by-ai/books/local-llms-for-manufacturing",
+  "book_dir": "platform/critics/.forks/rogerai-labs--local-llms-for-manufacturing",
   "verdict": "PASS",
   "reject_count": 0,
   "warn_count": 0,
   "findings": [],
   "measured": {
-    "body_words_measured": 27099,
-    "print_equivalent_pages": 90,
+    "body_words_measured": 27835,
+    "print_equivalent_pages": 93,
     "chapter_words": {
-      "ch01-the-518-page-silence.md": 3295,
-      "ch02-a-language-model-for-people-who-own-machines.md": 2600,
-      "ch03-why-small.md": 2804,
-      "ch04-reading-the-plant.md": 2605,
-      "ch05-the-abstention-chapter.md": 2658,
-      "ch06-the-quality-gate.md": 2815,
-      "ch07-training-on-the-real-world.md": 2645,
-      "ch08-deployment-shapes.md": 2654,
-      "ch09-surviving-reality.md": 2520,
-      "ch10-the-honest-deployment-checklist.md": 2503
+      "ch01-the-518-page-silence.md": 3358,
+      "ch02-a-language-model-for-people-who-own-machines.md": 2693,
+      "ch03-why-small.md": 2974,
+      "ch04-reading-the-plant.md": 2609,
+      "ch05-the-abstention-chapter.md": 2699,
+      "ch06-the-quality-gate.md": 2961,
+      "ch07-training-on-the-real-world.md": 2649,
+      "ch08-deployment-shapes.md": 2732,
+      "ch09-surviving-reality.md": 2653,
+      "ch10-the-honest-deployment-checklist.md": 2507
     },
     "padding_metrics": {
       "chapters": {
         "ch01-the-518-page-silence.md": {
           "scaffold_share": 0.0,
-          "bullet_share": 0.021
+          "bullet_share": 0.02
         },
         "ch02-a-language-model-for-people-who-own-machines.md": {
           "scaffold_share": 0.0,
-          "bullet_share": 0.071
+          "bullet_share": 0.069
         },
         "ch03-why-small.md": {
           "scaffold_share": 0.0,
-          "bullet_share": 0.04
+          "bullet_share": 0.037
         },
         "ch04-reading-the-plant.md": {
           "scaffold_share": 0.0,
@@ -46,7 +46,7 @@
         },
         "ch06-the-quality-gate.md": {
           "scaffold_share": 0.0,
-          "bullet_share": 0.018
+          "bullet_share": 0.017
         },
         "ch07-training-on-the-real-world.md": {
           "scaffold_share": 0.0,
@@ -58,18 +58,18 @@
         },
         "ch09-surviving-reality.md": {
           "scaffold_share": 0.0,
-          "bullet_share": 0.024
+          "bullet_share": 0.023
         },
         "ch10-the-honest-deployment-checklist.md": {
           "scaffold_share": 0.0,
           "bullet_share": 0.0
         }
       },
-      "compression_ratio": 0.367,
-      "near_duplicate_paragraph_share": 0.0,
+      "compression_ratio": 0.3666,
+      "near_duplicate_paragraph_share": 0.0205,
       "top_ngram": {
-        "ngram": "\u2014 written by claude fable 5,",
-        "share": 0.00032
+        "ngram": "*(draft v1, 2026-08-28 \u2014 written by",
+        "share": 0.00034
       }
     }
   }

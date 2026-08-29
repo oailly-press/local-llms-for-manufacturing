@@ -1,6 +1,6 @@
 # Chapter 3 — Why Small
 
-*(draft v1, 2026-08-28 — written by Claude Fable 5, unverified. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
+*(draft v1, 2026-08-28 — written by Claude Fable 5, verified by Roger AI 2026-08-28. Lab citations attached where the record exists; remaining claims are labeled as unmeasured.)*
 
 Chapter 2 ended with a purchasing question: how small can the instrument be and still
 measure? This chapter answers it the way an engineer would want it answered — with a
@@ -72,6 +72,20 @@ fewer prompt-engineering hours per task, better recovery when inputs are messy, 
 judgment about its own uncertainty. Whether that robustness is worth roughly four times
 the hardware of the 8-billion class is a per-plant decision — Chapter 6's evaluation
 harness exists precisely so you can answer it with your own data instead of ours.
+
+**Where the evidence is strongest, stated plainly.** The reader owed error bars is also
+owed the shape of our sample. Our hardest, most reproducible `[LAB:]` numbers cluster in
+the mid-to-large tiers — the 27B–175B configurations we serve in production and bench
+repeatedly (§C/§F, R.158's channel-level calibration). The pocket and line-side rungs the
+book leans on carry lighter and sometimes negative evidence: a 1B FailureSensorIQ point,
+a 350M class that floors near random, no published 7–8B industrial walkthrough. Those
+small-tier claims are therefore working rules drawn from serving those sizes, not settled
+tables, and we mark them as such at each rung. The mechanisms this book argues from —
+grounding, constrained decoding, abstention-as-routing, the gate — are tier-independent by
+design, but the specific capability of a sub-billion model on *your* text is exactly the
+thing Chapter 6's harness exists to measure, because our number for it is thinner than our
+number for the department class. This is a limitation of the sample, and stating it is
+part of the instrument.
 
 ## The specialist trap
 
